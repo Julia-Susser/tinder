@@ -28,7 +28,10 @@
   /* For mobile phones: */
   #img{
     height:80%;
-    width:70%;
+    width:300px;
+  }
+  img{
+    width:100%
   }
 
 }
