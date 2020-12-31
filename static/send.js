@@ -93,25 +93,3 @@ async function demo() {
   await sleep(2000);
   console.log('Two seconds later, showing sleep in a loop...');
 }
-
-
-
-
-
-
-var t = 0
-$(function(){
-  // Bind the swipeleftHandler callback function to the swipe event on div.box
-  $( "body" ).on( "swipeleft", swipeleftHandler );
-  if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-  // Callback function references the event target and adds the 'swipeleft' class to it
-    function swipeleftHandler( event ){
-      if (t == 0){
-        console.log("hey")
-        t = 1
-        send("left")
-        demo()
-      }
-    }
-  }
-});
