@@ -10,7 +10,7 @@ var img = document.createElement("img")
 img.id = 'img'
 img.src = "static/img/"+path
 img.height = "500"
-img.width = "300"
+img.width = "500"
 $("#img").append(img)
 
 
