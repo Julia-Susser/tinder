@@ -23,3 +23,11 @@
 .all{
   margin-left:5%;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #img{
+    height:1000px;
+    width:1000px;
+  }
+}
