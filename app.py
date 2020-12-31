@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 app = Flask(__name__)
+import os
 import pyrebase
 firebaseConfig = {
     "apiKey": "AIzaSyCbRWiyBegoynT3lDv_14FbD0fadaSim3Q",
