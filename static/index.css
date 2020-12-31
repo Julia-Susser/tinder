@@ -27,7 +27,8 @@
 @media only screen and (max-width: 1000px) {
   /* For mobile phones: */
   #img{
-    height:10000px;
-    width:10000px;
+    height:90%;
+    width:90%;
   }
+
 }
