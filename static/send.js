@@ -9,8 +9,6 @@ var path = dir[0]
 var img = document.createElement("img")
 img.id = 'img'
 img.src = "static/img/"+path
-img.height= "300"
-img.width= "300"
 $("#img").append(img)
 
 
