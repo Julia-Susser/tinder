@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home2.css') }}">
+
+
+</head>
+<body>
+
+
+
+  <div id="table">
+    <form action="" method="post">
+
+
+      <div id="href">
+        <input id="submit" type="submit" name="action" value="submit">
+
+      </div>
+        <table>
+
+          {% for p in ppl %}
+
+
+              <img style="width:100px;height:100px;"src="{{ p }}">
+              {% set pp = p.split('/')[-1] %}
+              <br>
+              <input type="radio" name="{{ pp }}" value="1">
+                <label for="1">1</label><br>
+                <input type="radio" name="{{ pp }}" value="2">
+                <label for="2">2</label><br>
+                <input type="radio" name="{{ pp }}" value="3">
+                <label for="3">3</label><br>
+                <input type="radio" name="{{ pp }}" value="4">
+                <label for="4">4</label><br>
+                <input type="radio" name="{{ pp }}" value="5">
+                <label for="5">5</label>
+                <br>
+              <br>
+          {% endfor %}
+        </table>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>
