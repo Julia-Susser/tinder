@@ -7,6 +7,7 @@ $("#back1").append(img)
 
 
 
+
 var val = 0
 var path = dir[0]
 //$("img").attr("src",path);
