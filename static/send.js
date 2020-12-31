@@ -38,6 +38,7 @@ function send(which){
   path = dir[val]
   img.src = "static/img/"+path
 }
+t = 0
 }
 
 var ratings = {}
@@ -76,5 +77,41 @@ $(function(){
     console.log("ello")
     send("right")
 
+  }
+});
+
+
+
+
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function demo() {
+  console.log('Taking a break...');
+  await sleep(2000);
+  console.log('Two seconds later, showing sleep in a loop...');
+}
+
+
+
+
+
+
+var t = 0
+$(function(){
+  // Bind the swipeleftHandler callback function to the swipe event on div.box
+  $( "body" ).on( "swipeleft", swipeleftHandler );
+  if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+  // Callback function references the event target and adds the 'swipeleft' class to it
+    function swipeleftHandler( event ){
+      if (t == 0){
+        console.log("hey")
+        t = 1
+        send("left")
+        demo()
+      }
+    }
   }
 });
