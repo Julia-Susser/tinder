@@ -28,7 +28,7 @@ def hello():
     else:
         val = 0
 
-    return render_template('index.html', dir=dir
+    return render_template('swipe.html', dir=dir
     )
 @app.route('/send', methods=['post', 'get'])
 def send():
