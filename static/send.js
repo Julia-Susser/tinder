@@ -1,8 +1,3 @@
-var img = document.createElement("button")
-img.id = 'back'
-img.innerHTML = "&#10094;"
-
-$("#back1").append(img)
 
 
 
@@ -11,17 +6,14 @@ $("#back1").append(img)
 var val = 0
 var path = dir[0]
 //$("img").attr("src",path);
-img = document.createElement("img")
+var img = document.createElement("img")
 img.id = 'img'
 img.src = "static/img/"+path
-
+img.height= "300"
+img.width= "300"
 $("#img").append(img)
 
-img = document.createElement("button")
-img.id = 'back'
-img.innerHTML = "&#10095;"
 
-$("#forward1").append(img)
 
 
 
