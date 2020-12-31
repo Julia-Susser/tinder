@@ -17,6 +17,8 @@ $("#img").append(img)
 
 
 
+
+
 function send(which){
   if (which === "left"){
     //ratings[0].push(path)
