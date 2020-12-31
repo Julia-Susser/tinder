@@ -1,6 +1,19 @@
 from flask import Flask, request, jsonify
 app = Flask(__name__)
+import pyrebase
+firebaseConfig = {
+    "apiKey": "AIzaSyCbRWiyBegoynT3lDv_14FbD0fadaSim3Q",
+    "authDomain": "tinder-34e91.firebaseapp.com",
+     "databaseURL": "https://tinder-34e91-default-rtdb.firebaseio.com/",
+    "projectId": "tinder-34e91",
+    "storageBucket": "tinder-34e91.appspot.com",
+    "messagingSenderId": "223258868490",
+    "appId": "1:223258868490:web:915fb670330134ef2a58f3",
+    "measurementId": "G-8GW1X2NFB8"
+  };
+firebase = pyrebase.initialize_app(firebaseConfig)
 
+db = firebase.database()
 @app.route('/getmsg/', methods=['GET'])
 def respond():
     # Retrieve the name from url parameter
