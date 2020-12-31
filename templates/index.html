@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     <link rel="stylesheet" href="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
@@ -13,26 +13,24 @@
   var dir = {{dir|tojson}}.pics
   </script>
 
-  {% set val = 0 %}
+<h3>Does the person in the picture look he manages money on Wall Street?</h3>
+<p>Swipe Right: Yes</br>Swipe Left: No</p>
 
 
-    <form action="" method="post">
 
-
-      <div id="href">
-        <input id="submit" type="submit" name="action" value="submit">
-
-      </div>
-
-    </form>
-
+<div id="back1">
+  <button id="back">&#10094;</button>
+  <p>No</p>
+</div>
+<div id="img">
+</div>
+<div id="forward1">
+  <button id="back">&#10095;</button>
+  <p>Yes</p>
 </div>
 
+
 <script src='static/send.js'></script>
-
-
-
-
 
 </body>
 </html>

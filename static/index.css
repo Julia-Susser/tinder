@@ -1,0 +1,15 @@
+#back, #forward{
+  border-radius: 3px;
+  width: auto;
+  margin-top: 100px;
+  padding: 16px;
+  color: black;
+  border:solid;
+  font-weight: bold;
+  font-size: 18px;
+
+
+}
+#img, #back1, #forward1{
+  float:left
+}

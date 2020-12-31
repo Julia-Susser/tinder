@@ -1,13 +1,20 @@
 
 
+
+
+
 var val = 0
 var path = dir[0]
 //$("img").attr("src",path);
 var img = document.createElement("img")
 img.id = 'img'
 img.src = "static/img/"+path
-img.height= "100"
-$("body").append(img)
+img.height= "300"
+img.width= "300"
+$("#img").append(img)
+
+
+
 
 
 function send(which){
@@ -32,7 +39,7 @@ function send(which){
     console.log(JSON.stringify(ratings))
     xhttp.open("GET", "/send?ratings="+JSON.stringify(ratings), true);
     xhttp.send();
-    document.write("<p>hey</p>")
+    document.write("<h2>Thanks For Filling Out this Survey</h2>")
   }else{
   val +=1
   path = dir[val]
@@ -56,7 +63,7 @@ $("body").keydown(function(e) {
 
 
 //$("body").on( "swipeleft", send("left") );
-$(function(){
+
   // Bind the swipeHandler callback function to the swipe event on div.box
   $( "body" ).on( "swipeleft", swipeHandler );
 
@@ -66,30 +73,23 @@ $(function(){
     send("left")
 
   }
-});
 
-$(function(){
+
+
   // Bind the swipeHandler callback function to the swipe event on div.box
   $( "body" ).on( "swiperight", swipeHandler );
 
   // Callback function references the event target and adds the 'swipe' class to it
   function swipeHandler( event ){
-    console.log("ello")
+
     send("right")
 
   }
+
+
+$("#back").click(function() {
+  send("left")
 });
-
-
-
-
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function demo() {
-  console.log('Taking a break...');
-  await sleep(2000);
-  console.log('Two seconds later, showing sleep in a loop...');
-}
+$("#forward").click(function() {
+  send("right")
+});
