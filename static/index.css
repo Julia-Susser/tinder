@@ -19,16 +19,10 @@
   margin:0;
   height:75%;
 }
-
+img{
+  height:500px;
+  width:500px;
+}
 .all{
   margin-left:5%;
-}
-
-@media only screen and (max-width: 1000px) {
-  /* For mobile phones: */
-  img{
-    height:500px;
-    width:500px;
-  }
-
 }
